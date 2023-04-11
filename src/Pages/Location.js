@@ -12,7 +12,7 @@ const Location = () => {
   console.log(locations);
   return (
     <section id="location" key={"loc" + location.id}>
-      <Carousel album={location.pictures} time={5000} />
+      <Carousel album={location.pictures} time={10000} />
       <div className="intro">
         <h2>{location.title}</h2>
         <p>{location.location}</p>
