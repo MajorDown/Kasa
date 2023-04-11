@@ -7,13 +7,13 @@ const Accueil = () => {
   const locations = useContext(locationsContext);
 
   return (
-    <div>
-      <main>
-        <div className="pagePhoto">
-          <img src={accueilPhoto} alt="accueil" />
-          <h2>Chez vous, partout et ailleurs</h2>
-        </div>
-        <section id="accueil">
+    <main>
+      <div className="photoAccueil">
+        <img src={accueilPhoto} alt="accueil" />
+        <h2>Chez vous, partout et ailleurs</h2>
+      </div>
+      <section id="accueil">
+        <div id="accueilContainer">
           {locations.map((location) => (
             <Link
               key={location.id}
@@ -21,15 +21,19 @@ const Accueil = () => {
               to={"/locations/" + location.id}
             >
               <article className="locArticle" key={location.id}>
-                <img src={location.cover} alt={location.title} />
-                <div className="locFilter"></div>
+                <img
+                  className="locImg"
+                  src={location.cover}
+                  alt={location.title}
+                />
+                <div className="locFilter">.</div>
                 <strong className="locTitle">{location.title}</strong>
               </article>
             </Link>
           ))}
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
