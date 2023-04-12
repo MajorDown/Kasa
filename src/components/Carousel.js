@@ -4,6 +4,11 @@ import vRight from "../images/icons/v-right.png";
 
 const Carousel = ({ album, time }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isActive, setIsActive] = useState(album.length > 1);
+
+  useEffect(() => {
+    setIsActive(album.length > 1);
+  }, [album]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,19 +27,21 @@ const Carousel = ({ album, time }) => {
 
   return (
     <div className="carousel">
+      <img id="carouselItem" src={album[currentIndex]} alt="carousel item" />
       <img
-        className="prevButton"
+        id="prevButton"
+        className={isActive ? "active" : ""}
         src={vLeft}
         alt="image suivante"
         onClick={handlePrev}
       />
       <img
-        className="nextButton"
+        id="nextButton"
+        className={isActive ? "active" : ""}
         src={vRight}
         alt="image suivante"
         onClick={handleNext}
       />
-      <img src={album[currentIndex]} alt="carousel item" />
     </div>
   );
 };

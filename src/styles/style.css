@@ -17,7 +17,8 @@
 /**********HEADER********************/
 
 header {
-    width: 1240px;
+    max-width: 1240px;
+    width: 98%;
     margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +41,9 @@ nav {
 /**********MAIN********************/
 
 main {
-    width: 1240px;
+    max-width: 1240px;
+    width: 98%;
+    min-height: 80vh;
     margin: 0px auto;
 }
 
@@ -57,6 +60,7 @@ main {
     overflow: hidden;
     position: relative;
     text-align: center;
+    object-fit: cover;
 }
 
 .photoAccueil img {
@@ -123,3 +127,285 @@ main {
 }
 
 /**********LOCATION*******************/
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1240/415;
+    width: 100%;
+    height: 415px;
+    border-radius: 35px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    background: var(--color2);
+}
+
+/* @keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade {
+    animation: fade 10s ease-in-out;
+} */
+
+#carouselItem {
+    object-fit: cover;
+}
+
+#prevButton,
+#nextButton {
+    display: none;
+}
+
+#prevButton.active {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#nextButton.active {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 99%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
+
+#location {
+    color: var(--color1);
+}
+
+.locPresentation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    height: 150px;
+}
+
+#location h2 {
+    color: var(--color1);
+    font-size: 36px;
+}
+
+.locIntro p {
+    font-size: 18px;
+}
+
+.locTags {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0px;
+
+}
+
+.locTags li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 115px;
+    padding: 0px 10px;
+    background: var(--color1);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.locHost {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.hostName {
+    max-width: 95px;
+    text-align: end;
+    padding-right: 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.hostBadge {
+    aspect-ratio: 1/1;
+    width: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.hostBadge img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.rateStar {
+    width: 24px;
+    height: 24px;
+}
+
+/**********ACCORDION********************/
+
+.accordionsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion {
+    width: 47%;
+}
+
+.accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color1);
+    color: white;
+    font-size: 18px;
+    padding: 13px 20px;
+    border-radius: 10px;
+}
+
+.accordionHeader img {
+    height: 14px;
+}
+
+.accordionContent {
+    background: var(--color2);
+    position: relative;
+    top: -5px;
+    height: 0px;
+    border-radius: 0px 0px 10px 10px;
+    z-index: -1;
+    transition: height 0.5s;
+    overflow: hidden;
+}
+
+.accordionContent.open {
+    height: 250px;
+    transition: height 0.5s;
+}
+
+.accordionContent div {
+    margin: 40px 20px;
+}
+
+.accordionContent ul li {
+    list-style: none;
+}
+
+/*********ERROR404********************/
+
+#error404 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#error404 h2 {
+    color: var(--color1);
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 410px;
+}
+
+#error404 p {
+    color: var(--color1);
+    font-size: 36px;
+    line-height: 51px;
+    padding-bottom: 180px;
+}
+
+.error404RedirectLink {
+    text-decoration: underline;
+    color: var(--color1);
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/***********ABOUT*******************/
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photoAbout {
+    display: block;
+    width: 100%;
+    height: 223px;
+    margin: 35px auto;
+    background: black;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photoAbout img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+}
+
+#about .accordion {
+    width: 82.5%;
+    margin-bottom: 30px;
+}
+
+#about .accordionContent {
+    height: 0px;
+    max-height: 0px;
+    transition: max-height 0.5s;
+}
+
+#about .accordionContent.open {
+    height: auto;
+    max-height: 130px;
+    transition: max-height 0.5s;
+}
+
+#about .accordionContent div {
+    margin: 40px 20px 20px 20px;
+}
+
+/**********FOOTER*******************/
+
+footer {
+    background: black;
+    width: 100%;
+    margin: 40px auto 0px auto;
+    padding: 66px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#copyRight {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 32px;
+}

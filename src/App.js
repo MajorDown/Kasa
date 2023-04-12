@@ -1,8 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import About from "./Pages/About";
 import Accueil from "./Pages/Accueil";
 import Location from "./Pages/Location";
-import Header from "./components/Header";
+import Error404 from "./Pages/Error404";
 import "./styles/style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -24,10 +26,12 @@ function App() {
       <locationsContext.Provider value={locationsList}>
         <Routes>
           <Route exact path="/" Component={Accueil} />
-          <Route path="/about" Component={About} />
+          <Route exact path="/about" Component={About} />
           <Route path="locations/:id" Component={Location} />
+          <Route path="*" Component={Error404} />
         </Routes>
       </locationsContext.Provider>
+      <Footer />
     </BrowserRouter>
   );
 }
