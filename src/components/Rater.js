@@ -19,7 +19,7 @@ const Rater = ({ rate }) => {
     const filled = i < rate;
     starsList.push(<StarIcon className="rateStar" key={i} fill={filled} />);
   }
-  return <div>{starsList}</div>;
+  return <div className="locRater">{starsList}</div>;
 };
 
 export default Rater;

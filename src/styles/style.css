@@ -93,7 +93,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 4.8vw;
+    gap: 3.2vw;
     margin: 56px auto;
     position: relative;
 }
@@ -186,10 +186,13 @@ main {
     flex-wrap: wrap;
     align-content: space-between;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
+    max-height: 200px;
 }
 
 #location h2 {
+    display: inline-block;
+    width: 60vw;
     color: var(--color1);
     font-size: 36px;
 }
@@ -218,6 +221,7 @@ main {
 }
 
 .locHost {
+    max-width: 200px;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
@@ -400,4 +404,36 @@ footer {
     .locTitle {
         font-size: 15px;
     }
+}
+
+@media only screen and (max-width : 800px) {
+
+    .locPresentation {
+        max-height: 400px;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .locIntro {
+        width: 100%;
+        order: 1
+    }
+
+    .locTags {
+        width: 100%;
+        order: 2
+    }
+
+    .locRater {
+        width: 60%;
+        height: 64px;
+        order: 3
+    }
+
+    .locHost {
+        width: 40%;
+        order: 4
+    }
+
 }
