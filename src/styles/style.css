@@ -88,40 +88,47 @@ main {
 }
 
 #accueilContainer {
+    width: 92%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    margin: 56px 50px;
+    gap: 4.8vw;
+    margin: 56px auto;
     position: relative;
 }
 
+#accueilContainer .link {
+    aspect-ratio: 1/1;
+    width: 29.5%;
+}
+
 .locArticle {
-    width: 340px;
-    height: 340px;
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 100%;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .locImg {
-    width: 340px;
-    height: 340px;
+    aspect-ratio: 1/1;
+    width: 100%;
     object-fit: cover;
 }
 
 .locFilter {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     position: relative;
-    top: -340px;
+    top: -102%;
 }
 
 .locTitle {
-    position: relative;
-    top: -420px;
-    left: 20px;
+    position: absolute;
+    top: +81%;
+    left: +8%;
     color: white;
     font-size: 18px;
 }
@@ -141,28 +148,6 @@ main {
     position: relative;
     background: var(--color2);
 }
-
-/* @keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-    }
-
-    95% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.fade {
-    animation: fade 10s ease-in-out;
-} */
 
 #carouselItem {
     object-fit: cover;
@@ -396,7 +381,7 @@ footer {
     background: black;
     width: 100%;
     margin: 40px auto 0px auto;
-    padding: 66px;
+    padding-top: 66px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -408,4 +393,11 @@ footer {
     margin-top: 30px;
     font-size: 24px;
     line-height: 32px;
+}
+
+@media only screen and (max-width : 1185px) {
+
+    .locTitle {
+        font-size: 15px;
+    }
 }
