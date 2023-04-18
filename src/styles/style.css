@@ -38,6 +38,10 @@ nav {
     font-size: 24px;
 }
 
+.link:focus {
+    text-decoration: underline;
+}
+
 /**********MAIN********************/
 
 main {
@@ -408,6 +412,10 @@ footer {
 
 @media only screen and (max-width : 800px) {
 
+    #accueilContainer .link {
+        width: 45%;
+    }
+
     .locPresentation {
         max-height: 400px;
         flex-direction: row;
@@ -436,4 +444,88 @@ footer {
         order: 4
     }
 
+    .accordionsContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 620px) {
+
+    header img {
+        width: 145px;
+        height: 47px
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    a.link {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .photoAccueil {
+        height: 111px;
+    }
+
+    .photoAccueil h2 {
+        display: block;
+        width: 217px;
+        font-size: 24px;
+        text-align: left;
+        margin-left: 5%;
+        bottom: -80%;
+    }
+
+    #accueilContainer .link {
+        width: 100%;
+    }
+
+    .carousel {
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    #prevButton.active,
+    #nextButton.active {
+        width: 4%;
+    }
+
+    .locIntro {
+        width: 100%;
+    }
+
+    #location h2 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .locIntro p {
+        font-size: 14px;
+    }
+
+    .locTags {
+        flex-wrap: wrap;
+    }
+
+    .locTags li {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .locRater {
+        display: flex;
+        align-items: center;
+    }
+
+    .locRater svg {
+        width: 24px;
+        height: 24px;
+    }
 }
