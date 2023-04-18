@@ -19,7 +19,7 @@
 header {
     max-width: 1240px;
     width: 98%;
-    margin: 40px auto;
+    margin: 40px auto 25px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -522,6 +522,17 @@ footer {
     .locRater {
         display: flex;
         align-items: center;
+        height: 32px;
+    }
+
+    .hostName {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .hostBadge {
+        width: 32px;
+        height: 32px;
     }
 
     .locRater svg {
