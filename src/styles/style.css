@@ -19,7 +19,7 @@
 header {
     max-width: 1240px;
     width: 98%;
-    margin: 40px auto 25px auto;
+    margin: 40px auto 0px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -399,6 +399,7 @@ footer {
 
 #copyRight {
     margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 32px;
 }
@@ -407,6 +408,17 @@ footer {
 
     .locTitle {
         font-size: 15px;
+    }
+
+    #error404 h2 {
+        font-size: 96px;
+        line-height: 137px;
+    }
+
+    #error404 p {
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 130px;
     }
 }
 
@@ -472,6 +484,7 @@ footer {
 
     .photoAccueil {
         height: 111px;
+        border-radius: 10px;
     }
 
     .photoAccueil h2 {
@@ -481,6 +494,12 @@ footer {
         text-align: left;
         margin-left: 5%;
         bottom: -80%;
+        top: -75%;
+
+    }
+
+    .locFilter {
+        top: -100%;
     }
 
     #accueilContainer .link {
@@ -490,6 +509,12 @@ footer {
     .carousel {
         height: 255px;
         border-radius: 10px;
+    }
+
+    #carouselItem {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     #prevButton.active,
@@ -539,4 +564,65 @@ footer {
         width: 24px;
         height: 24px;
     }
+
+    #about .accordionContent div {
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+
+    .photoAccueil {
+        margin: 15px auto;
+    }
+
+
+    #accueil {
+        background: white;
+
+    }
+
+    #accueilContainer {
+        margin: 0px;
+        width: 100%;
+    }
+
+    #accueilContainer .link {
+        width: 100%;
+    }
+
+    #copyRight {
+        font-size: 12px;
+    }
+
+    .accordionHeader {
+        padding: 5px 12px;
+        border-radius: 5px;
+    }
+
+    .accordionHeader p {
+        font-size: 12px;
+    }
+
+    .accordion .arrowIcon {
+        height: 9px;
+    }
+
+    .accordionContent.open {
+        height: 200px;
+    }
+
+    .accordionContent div {
+        font-size: 12px;
+    }
+
+    .photoAbout {
+        border-radius: 10px;
+    }
+
+    #about .accordion {
+        width: 100%;
+
+    }
+
 }
