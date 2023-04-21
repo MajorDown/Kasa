@@ -194,9 +194,13 @@ main {
     max-height: 200px;
 }
 
+.locIntro {
+    width: 60%;
+}
+
 #location h2 {
     display: inline-block;
-    width: 60vw;
+    max-width: 70%;
     color: var(--color1);
     font-size: 36px;
 }
