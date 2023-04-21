@@ -4,11 +4,16 @@ import { locationsContext } from "../App";
 import Accordion from "../components/Accordion";
 import Rater from "../components/Rater";
 import Carousel from "../components/Carousel";
+import Error404 from "./Error404";
 
 const Location = () => {
   const locations = useContext(locationsContext);
   const { id } = useParams();
   const location = locations.find((loc) => loc.id === id);
+
+  if (!location) {
+    return <Error404 />;
+  }
 
   return (
     <main>

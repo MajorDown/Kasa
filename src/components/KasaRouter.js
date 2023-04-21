@@ -10,7 +10,7 @@ const KasaRouter = () => {
     <Routes>
       <Route exact path="/" Component={Accueil} />
       <Route exact path="/about" Component={About} />
-      <Route path="locations/:id" Component={Location} />
+      <Route exact path="locations/:id" Component={Location} />
       <Route path="*" Component={Error404} />
     </Routes>
   );
