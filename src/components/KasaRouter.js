@@ -8,9 +8,9 @@ import Error404 from "../Pages/Error404";
 const KasaRouter = () => {
   return (
     <Routes>
-      <Route exact path="/" Component={Accueil} />
+      <Route exact path={"/"} Component={Accueil} />
       <Route exact path="/about" Component={About} />
-      <Route exact path="locations/:id" Component={Location} />
+      <Route exact path="/locations/:id" Component={Location} />
       <Route path="*" Component={Error404} />
     </Routes>
   );

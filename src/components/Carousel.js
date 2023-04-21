@@ -5,6 +5,7 @@ import vRight from "../images/icons/v-right.png";
 const Carousel = ({ album, time }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isActive, setIsActive] = useState(album.length > 1);
+  const totalPhotos = album.length;
 
   useEffect(() => {
     setIsActive(album.length > 1);
@@ -42,6 +43,10 @@ const Carousel = ({ album, time }) => {
         alt="image suivante"
         onClick={handleNext}
       />
+      <p className={`carousel-counter ${isActive ? "active" : ""}`}>
+        {" "}
+        {currentIndex + 1}/{album.length}{" "}
+      </p>
     </div>
   );
 };
