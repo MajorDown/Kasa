@@ -523,7 +523,15 @@ footer {
 
     #accueilContainer .link {
         aspect-ratio: 335/255;
-        width: 47%;
+        width: 100%;
+    }
+
+    #accueilContainer .link strong {
+        font-size: 24px;
+    }
+
+    .locFilter {
+        top: -100%;
     }
 
     #location {
@@ -678,4 +686,9 @@ footer {
         aspect-ratio: 335/255;
         width: 100%;
     }
+
+    #accueilContainer .link strong {
+        font-size: 14px;
+    }
+
 }
