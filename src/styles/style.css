@@ -16,6 +16,10 @@
 
 /**********HEADER********************/
 
+body {
+    margin: 0px 60px 0px 60px;
+}
+
 header {
     max-width: 1240px;
     width: 98%;
@@ -482,6 +486,10 @@ footer {
 }
 
 @media only screen and (max-width : 768px) {
+    body {
+        margin: 0px;
+    }
+
     header {
         max-width: 89.4%;
         margin: 5.3% auto 0% auto;
